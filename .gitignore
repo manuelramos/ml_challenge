@@ -1,2 +1,4 @@
 .python-version
 .mysql-data/
+.vscode/
+__pycache__/

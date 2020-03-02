@@ -1,4 +1,6 @@
 # Setup
+Just build your mysql container if you do not have a mysql server instance running locally in order to test this script.
+
 ## Run:
 `docker-compose up -d`
 
@@ -41,3 +43,22 @@ mysql> show databases;
 2 rows in set (0.00 sec)
 
 ```
+
+# Check the results
+list the docker containers and look for the mysql one.
+
+`docker ps`
+
+Then open an interactive console with:
+
+`docker exec -it <psql running container name> bash`
+
+Now, you can log in into the mysql server to check the results.
+
+# Walkarounds
+
+In order to simplify the access to your emails, visit https://www.google.com/settings/security/lesssecureapps and enable the option.
+
+# References
+IMAP Search criteria https://tools.ietf.org/html/rfc3501#section-6.4.4
+Python IMAP Reference https://docs.python.org/3/library/imaplib.html
