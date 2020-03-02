@@ -1,10 +1,20 @@
 # Setup
 Just build your mysql container if you do not have a mysql server instance running locally in order to test this script.
 
-## Run:
+## Build a virtual env
+Using pyenv:
+`pyenv virtualenv 3.8 email_fetcher` you need python 3.8 installed.
+
+## Install dependencies
+`pip install -r requirements.txt`
+
+## Run the mysql container:
 `docker-compose up -d`
 
-## Log in into the container
+## Run the script
+`python main.py`
+
+## To check the results, log in into the mysql container
 ```
 ~$ docker exec -it ${CONTAINER-NAME} bash
 ```
@@ -43,17 +53,6 @@ mysql> show databases;
 2 rows in set (0.00 sec)
 
 ```
-
-# Check the results
-list the docker containers and look for the mysql one.
-
-`docker ps`
-
-Then open an interactive console with:
-
-`docker exec -it <psql running container name> bash`
-
-Now, you can log in into the mysql server to check the results.
 
 # Walkarounds
 
